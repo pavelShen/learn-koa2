@@ -5,4 +5,4 @@
   - webpack-dev-middleware
   - webpack-hot-middleware
   - 前端打包系列
-   
+  - manifest

@@ -12,6 +12,11 @@ app.use(views(__dirname + '/views', {
   }
 }));
 
+if (util.isLocal) {
+  // app.use(webpackDevMiddleware());
+  // app.use(webpackHotMiddleware());
+}
+
 const router = require('./router/')(app)
 
 app.listen(3000)

@@ -1,6 +1,6 @@
 'use strict'
 
 module.exports = function(app) {
-  require('./a.js')(app)
-  require('./b.js')(app)
+  require('./project1/index.js')(app)
+  require('./project2/index.js')(app)
 }

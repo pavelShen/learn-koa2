@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server/app.js"
+    "start": "nodemon server/app.js"
   },
   "dependencies": {
     "babel-preset-env": "^1.4.0",
@@ -17,5 +17,8 @@
     "nunjucks": "^3.0.0",
     "superagent": "^3.5.2",
     "webpack": "^2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
