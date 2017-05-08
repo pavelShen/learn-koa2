@@ -38,6 +38,9 @@ module.exports = {
     }]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist'],{
+      root: path.resolve(__dirname, '../')
+    }),
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('[name].[chunkhash:8].css'),
     new webpack.optimize.CommonsChunkPlugin({

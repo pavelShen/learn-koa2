@@ -1,11 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
 
+const targetInfo = require('./bundleTarget.js')
 const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true';
 
 module.exports = {
   entry:{
-    main:['./front/project1/index.js',hotMiddlewareScript]
+    main:[`./front/${targetInfo.projectName}/index.js`,hotMiddlewareScript]
   },
   output: {
     filename: '[name].js',
