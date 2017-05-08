@@ -76,7 +76,7 @@ else if(process.env.NODE_ENV==='prod'){
       }]
     },
     plugins: [
-      new ExtractTextPlugin('styles.css'),
+      new ExtractTextPlugin('[name].[chunkhash:8].css'),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         minChunks: function (module) {

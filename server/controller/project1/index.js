@@ -1,4 +1,5 @@
 const superagent = require('superagent')
+const env = process.env.NODE_ENV
 
 var getData = function(){
   return new Promise((resolve, reject) => {
@@ -25,7 +26,8 @@ module.exports = async function (ctx, next) {
   let data = await getData()
   let text = JSON.parse(data.text)
 
-  await ctx.render('a', {
+  await ctx.render('./project1/a.html', {
+    env,
     user: text.Code
   });
 }

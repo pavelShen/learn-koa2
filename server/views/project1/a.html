@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>a</title>
+    {% if env === 'prod' %}
     <link rel="stylesheet" href="/styles.css">
+    {% endif %}
   </head>
   <body>
     <div>{{ user }} +2</div>
+    {% if env === 'prod' %}
     <script src="/manifest.9f5f1e6b.js"></script>
     <script src="/vendor.6d6c166b.js"></script>
     <script src="/main.cd08b2e3.js"></script>
-
+    {% elif env === 'dev' %}
     <script src="main.js"></script>
+    {% endif %}
   </body>
 </html>
