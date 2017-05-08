@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=dev nodemon server/app.js",
-    "prod": "NODE_ENV=prod nodemon server/app.js",
-    "build": "NODE_ENV=prod webpack --config ./config/webpack.config.js"
+    "build": "NODE_ENV=prod webpack --config ./config/webpack.config.js --colors"
   },
   "dependencies": {
     "babel-preset-env": "^1.4.0",
