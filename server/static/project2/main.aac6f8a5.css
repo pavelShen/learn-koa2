@@ -1,0 +1,13 @@
+.app {
+  width: 200px; }
+  .app a {
+    color: red;
+    width: 100px;
+    margin-top: 20%;
+    display: block; }
+
+canvas {
+  position: absolute;
+  top: -19px;
+  left: 0;
+  z-index: 10; }
