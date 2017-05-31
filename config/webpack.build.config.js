@@ -12,10 +12,19 @@ module.exports = {
   },
   output: {
     filename: '[name].[chunkhash:8].js',
-    path: path.resolve(__dirname, `../dist/${targetInfo.projectName}`)
+    path: path.resolve(__dirname, `../server/static/${targetInfo.projectName}`)
   },
   module: {
     rules: [{
+      test: /\.scss$/,
+      use: [{
+          loader: "style-loader" // creates style nodes from JS strings
+      }, {
+          loader: "css-loader" // translates CSS into CommonJS
+      }, {
+          loader: "sass-loader" // compiles Sass to CSS
+      }]
+    },{
       test: /\.css$/,
       use: ExtractTextPlugin.extract({
         use: 'css-loader'
@@ -38,8 +47,8 @@ module.exports = {
     }]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'],{
-      root: path.resolve(__dirname, '../')
+    new CleanWebpackPlugin([`server/static/${targetInfo.projectName}`],{
+      root: path.resolve(__dirname, `../`)
     }),
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('[name].[chunkhash:8].css'),

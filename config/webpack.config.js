@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const webpackDevConfig = require('./webpack.dev.config.js')
-const webpackProdConfig = require('./webpack.prod.config.js')
+const webpackProdConfig = require('./webpack.build.config.js')
 
 let webpackConfig;
 if(process.env.NODE_ENV==='dev'){

@@ -1,7 +1,7 @@
 const superagent = require('superagent')
 const env = process.env.NODE_ENV
 
-const manifest = require('../../../dist/project1/manifest.json')
+const manifest = require('../../static/project1/manifest.json')
 
 var getData = function(){
   return new Promise((resolve, reject) => {
@@ -31,6 +31,7 @@ module.exports = async function (ctx, next) {
   await ctx.render('./project1/a.html', {
     env,
     user: text.Code,
-    manifest
+    manifest,
+    projectName:'project1'
   });
 }
