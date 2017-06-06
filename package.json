@@ -35,6 +35,8 @@
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-loader": "^0.4.5",
     "inquirer": "^3.0.6",
     "koa-webpack-dev-middleware": "^1.4.5",
     "koa-webpack-hot-middleware": "^1.0.3",
@@ -42,6 +44,7 @@
     "nodemon": "^1.11.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
     "webpack": "^2.4.1",
     "webpack-manifest-plugin": "^1.1.0"
   }

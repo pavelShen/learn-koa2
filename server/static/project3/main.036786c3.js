@@ -1,0 +1,1 @@
+webpackJsonp([1],[function(e,n){},function(e,n,o){o(0);!function(){var e=document.getElementById("c").getContext("2d"),n=["round","bevel","miter"];e.lineWidth=10;for(var o=0;o<n.length;o++)e.lineJoin=n[o],e.beginPath(),e.moveTo(-5,5+40*o),e.lineTo(35,45+40*o),e.lineTo(75,5+40*o),e.lineTo(115,45+40*o),e.lineTo(155,5+40*o),e.stroke()}()}],[1]);

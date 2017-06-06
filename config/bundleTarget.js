@@ -1,5 +1,5 @@
 const targetConfig = {
-  projectName:'project2'
+  projectName:'project3'
 }
 
 module.exports = targetConfig
