@@ -22,3 +22,8 @@
 
 ## 备忘
 1. 生成页面脚本 传入参数：项目名称
+
+## 内容
+http://localhost:3000/project1  框架测试
+http://localhost:3000/project2  canvas五边形
+http://localhost:3000/project3  canvas反色，灰度

@@ -1,34 +1,44 @@
-var d = require('./sass/index.scss')
+var canvas = document.getElementById('canvas')
+var ctx = canvas.getContext('2d');
+var canvasHeight = ctx.canvas.height;
+var canvasWidth = ctx.canvas.width;
 
-function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.fillRect(0,0,300,300);
-  for (var i=0;i<3;i++) {
-    for (var j=0;j<3;j++) {
-      ctx.save();
-      ctx.strokeStyle = "#9CFF00";
-      ctx.translate(50+j*100,50+i*100);
-      drawSpirograph(ctx,20*(j+2)/(j+1),-8*(i+3)/(i+1),10);
-      ctx.restore();
+var img = new Image();
+img.src = 'http://n1image.hjfile.cn/mh/2016/09/02/a0c9ca472e8ae8e26e34a31d98c074ce.jpg';
+img.crossOrigin = "anonymous"
+img.onload = function() {
+  draw(this);
+};
+
+function draw(img) {
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  img.style.display = 'none';
+  var imageData = ctx.getImageData(0,0,canvas.width, canvas.height);
+  var data = imageData.data;
+    
+  var invert = function() {
+    for (var i = 0; i < data.length; i += 4) {
+      data[i]     = 255 - data[i];     // red
+      data[i + 1] = 255 - data[i + 1]; // green
+      data[i + 2] = 255 - data[i + 2]; // blue
     }
-  }
-}
-function drawSpirograph(ctx,R,r,O){
-  var x1 = R-O;
-  var y1 = 0;
-  var i  = 1;
-  ctx.beginPath();
-  ctx.moveTo(x1,y1);
-  do {
-    if (i>20000) break;
-    var x2 = (R+r)*Math.cos(i*Math.PI/72) - (r+O)*Math.cos(((R+r)/r)*(i*Math.PI/72))
-    var y2 = (R+r)*Math.sin(i*Math.PI/72) - (r+O)*Math.sin(((R+r)/r)*(i*Math.PI/72))
-    ctx.lineTo(x2,y2);
-    x1 = x2;
-    y1 = y2;
-    i++;
-  } while (x2 != R-O && y2 != 0 );
-  ctx.stroke();
-}
+    ctx.putImageData(imageData, 0, 0);
+  };
 
-draw()
+  var grayscale = function() {
+    for (var i = 0; i < data.length; i += 4) {
+      var avg = (data[i] + data[i +1] + data[i +2]) / 3;
+      data[i]     = avg; // red
+      data[i + 1] = avg; // green
+      data[i + 2] = avg; // blue
+    }
+    ctx.putImageData(imageData, 0, 0);
+  };
+
+  var invertbtn = document.getElementById('invertbtn');
+  invertbtn.addEventListener('click', invert);
+  var grayscalebtn = document.getElementById('grayscalebtn');
+  grayscalebtn.addEventListener('click', grayscale);
+}
