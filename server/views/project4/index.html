@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>a</title>
+    {% if env === 'prod' %}
+    <link rel="stylesheet" href="/{{ projectName }}/{{ manifest['main.css'] }}">
+    {% endif %}
+  </head>
+  <body>
+    <div class="app">
+      <a href="#">project4</a>
+    </div>
+    <canvas id="canvas" width="600" height="300" ></canvas>
+    
+    {% if env === 'prod' %}
+    <script src="/{{ projectName }}/{{ manifest['manifest.js'] }}"></script>
+    <script src="/{{ projectName }}/{{ manifest['vendor.js'] }}"></script>
+    <script src="/{{ projectName }}/{{ manifest['main.js'] }}"></script>
+    {% elif env === 'dev' %}
+    <script src="main.js"></script>
+    {% endif %}
+  </body>
+</html>

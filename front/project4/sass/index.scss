@@ -1,0 +1,16 @@
+.app{
+  width:200px;
+  a{
+    color:red;
+    width:100px;
+    margin-top:20%;
+    display: block;
+    // background: url(http://n1image.hjfile.cn/mh/2016/09/12/39837d5ba5b8a3238a2a460ded6b3b23.jpg)
+  }
+}
+canvas{
+  position: absolute;
+  top:0px;
+  left:0;
+  z-index: 10
+}

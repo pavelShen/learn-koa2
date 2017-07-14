@@ -7,7 +7,8 @@
     "dev": "NODE_ENV=dev nodemon -L server/app.js",
     "build": "NODE_ENV=prod webpack --config ./config/webpack.build.config.js --colors",
     "postbuild": "NODE_ENV=prod nodemon -L server/app.js",
-    "command": "node server/command.js"
+    "command": "node server/command.js",
+    "create": "node tool/createNew.js"
   },
   "dependencies": {
     "babel-preset-env": "^1.4.0",
