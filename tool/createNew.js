@@ -1,5 +1,5 @@
-const path = require('path');
-const fs = require('fs');
+const path = require('path')
+const fs = require('fs')
 
 const copy = require('./copyDir.js')
 
@@ -13,20 +13,23 @@ let core = {
     }
     
     if(!this.existName()){
-      // this.copyFrontDir(pageName)
+      this.copyFrontDir(pageName)
+      this.createController()
+      this.createRouter()
+      this.copyViewDir()
     }
 
-    // this.changeBundleTarget()
+    this.changeBundleTarget()
   },
   existName(){
     let frontPath = path.join(__dirname,'../front/')
     let existFileArr = fs.readdirSync(frontPath,'utf8')
     if(existFileArr.includes(pageName)){
       console.log('项目已存在，请重新命名')
-      return false
+      return true
     }
     else {
-      return true
+      return false
     }
   },
   changeBundleTarget(){
@@ -47,9 +50,15 @@ let core = {
     let targetDir = path.join(__dirname,`../front/${dist}`)
     copy.init(frontDir,targetDir)
   },
+  copyViewDir(dist){
+    let viewDir = path.join(__dirname,'../newProjectTemp/view')
+    let targetDir = path.join(__dirname,`../server/views/${dist}`)
+    copy.init(viewDir,targetDir)
+  },
   createController(){
-    let controllerStr = `
-      const manifest = require('../../static/${pageName}/manifest.json')
+    let controllerPath = path.join(__dirname,`../server/controller/${pageName}`)
+    //let controllerPath = path.join(__dirname,`../fileTest/${pageName}`)
+    let controllerStr = `const manifest = require('../../static/${pageName}/manifest.json')
       const env = process.env.NODE_ENV
 
       module.exports = async function (ctx, next) {
@@ -60,8 +69,31 @@ let core = {
         });
       }
     `
-    
-  }
+
+    fs.mkdirSync(controllerPath)
+    fs.writeFile(`${controllerPath}/index.js`, controllerStr, (err) => {
+      if (err) throw err;
+    });
+  },
+  createRouter(){
+    let routerPath = path.join(__dirname,`../server/router/${pageName}`)
+    // let routerPath = path.join(__dirname,`../fileTest/${pageName}`)
+    let routerStr = `const Router = require('koa-router')
+      let router = new Router()
+      let controller = require('../../controller/${pageName}/index.js')
+
+      router.get('/${pageName}', controller);
+
+      module.exports = function(app) {
+        app.use(router.routes())
+      }
+    `
+
+    fs.mkdirSync(routerPath)
+    fs.writeFile(`${routerPath}/index.js`, routerStr, (err) => {
+      if (err) throw err;
+    });
+  },
   /**
    * 
    * 
@@ -78,6 +110,4 @@ let core = {
   }
 }
 
-
-//core.addExistName()
 core.init()

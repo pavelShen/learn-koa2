@@ -1,8 +1,17 @@
 'use strict'
 
+const path = require('path')
+const fs = require('fs')
+
 module.exports = function(app) {
-  require('./project1/index.js')(app)
-  require('./project2/index.js')(app)
-  require('./project3/index.js')(app)
-  require('./project4/index.js')(app)
+  let routePath = path.join(__dirname,'./')
+  let routeFileArr = fs.readdirSync(routePath,'utf8')
+
+  for(let item of routeFileArr){
+    fs.stat(`${routePath}${item}`, (err,st) => {
+      if(st.isDirectory()){
+        require(`./${item}/index.js`)(app)
+      }
+    })
+  }
 }
