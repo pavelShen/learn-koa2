@@ -16,7 +16,7 @@ let core = {
       this.copyFrontDir(pageName)
       this.createController()
       this.createRouter()
-      this.copyViewDir()
+      this.copyViewDir(pageName)
     }
 
     this.changeBundleTarget()
