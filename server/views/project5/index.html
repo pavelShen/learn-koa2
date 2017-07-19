@@ -8,16 +8,6 @@
     {% endif %}
   </head>
   <body>
-    <canvas id="canvas" width="200" height="200" ></canvas>
-    <div>
-      <input type="file" id="uploadFile" class="clip" accept="image/png, image/jpeg, image/gif, image/jpg">
-		  <label class="ui-button" for="uploadFile">选择图片</label>
-    </div>
-    <div>
-      <img id="imgCover" src="http://n1image.hjfile.cn/mh/2016/09/02/a0c9ca472e8ae8e26e34a31d98c074ce.jpg" crossorigin="" class="clip">
-      <p id="imgUploadX"></p>
-    </div>
-    
     {% if env === 'prod' %}
     <script src="/{{ projectName }}/{{ manifest['manifest.js'] }}"></script>
     <script src="/{{ projectName }}/{{ manifest['vendor.js'] }}"></script>

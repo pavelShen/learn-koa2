@@ -21,7 +21,7 @@ app.use(views(__dirname + '/views', {
 if(process.env.NODE_ENV==='dev'){
   let compiler = webpack(webpackConfig);
   app.use(convert(webpackDevMiddleware(compiler)));
-  // app.use(convert(webpackHotMiddleware(compiler)));
+  app.use(convert(webpackHotMiddleware(compiler)));
 }
 
 const router = require('./router/')(app)

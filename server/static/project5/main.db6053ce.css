@@ -1,0 +1,7 @@
+.app {
+  width: 200px; }
+  .app a {
+    color: red;
+    width: 100px;
+    margin-top: 20%;
+    display: block; }
