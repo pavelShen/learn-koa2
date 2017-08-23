@@ -52,7 +52,16 @@ module.exports = {
     new CleanWebpackPlugin([`server/static/${targetInfo.projectName}`],{
       root: path.resolve(__dirname, `../`)
     }),
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"',
+      },
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
     new ExtractTextPlugin('[name].[chunkhash:8].css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
