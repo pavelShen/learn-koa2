@@ -1,5 +1,4 @@
 <script>
-let d = '3'
 export default {
   data () {
     return {
