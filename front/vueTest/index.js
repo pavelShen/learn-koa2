@@ -1,6 +1,6 @@
 
 
-import Vue from 'vue/dist/vue.js'
+import Vue from 'vue/dist/vue'
 import App from './views/index.vue'
 
 require('./sass/index.scss')

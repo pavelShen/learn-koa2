@@ -1,8 +1,25 @@
 <script>
+let d = '3'
 export default {
   data () {
     return {
       message: '',
+      list:[
+        {
+          name:'a'
+        },
+        {
+          name:'b'
+        },
+        {
+          name:'c'
+        }
+      ]
+    }
+  },
+  methods:{
+    getDataId(){
+      
     }
   }
 }
@@ -13,5 +30,9 @@ export default {
   <div>
     <p>{{ message }}</p>  
     <input v-model="message">
+
+    <ul @click="getDataId">
+      <li v-for="item in list" :key="item.name" data-id='1'>{{ item.name }}</li>
+    </ul>
   </div>
 </template>  

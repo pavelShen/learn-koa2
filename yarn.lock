@@ -1714,6 +1714,13 @@ eslint-plugin-import@^2.7.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
+eslint-plugin-vue@beta:
+  version "3.12.0"
+  resolved "http://registry.npm.taobao.org/eslint-plugin-vue/download/eslint-plugin-vue-3.12.0.tgz#e9ad09d6c628fb2b6578068feda54403cf7a94db"
+  dependencies:
+    requireindex "^1.1.0"
+    vue-eslint-parser "2.0.0-beta.7"
+
 eslint-restricted-globals@^0.1.1:
   version "0.1.1"
   resolved "http://registry.npm.taobao.org/eslint-restricted-globals/download/eslint-restricted-globals-0.1.1.tgz#35f0d5cbc64c2e3ed62e93b4b1a7af05ba7ed4d7"
@@ -1767,7 +1774,7 @@ eslint@^4.5.0:
     table "^4.0.1"
     text-table "~0.2.0"
 
-espree@^3.5.0:
+espree@^3.3.2, espree@^3.5.0:
   version "3.5.0"
   resolved "http://registry.npm.taobao.org/espree/download/espree-3.5.0.tgz#98358625bdd055861ea27e2867ea729faf463d8d"
   dependencies:
@@ -4260,6 +4267,10 @@ require-uncached@^1.0.3:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
 
+requireindex@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/requireindex/download/requireindex-1.1.0.tgz#e5404b81557ef75db6e49c5a72004893fe03e162"
+
 resolve-from@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/resolve-from/download/resolve-from-1.0.1.tgz#26cbfe935d1aeeeabb29bc3fe5aeb01e93d44226"
@@ -4928,6 +4939,15 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+vue-eslint-parser@2.0.0-beta.7:
+  version "2.0.0-beta.7"
+  resolved "http://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-2.0.0-beta.7.tgz#43737861129620d16326ab7486919365b3d6e379"
+  dependencies:
+    debug "^2.6.3"
+    eslint-scope "^3.7.1"
+    espree "^3.3.2"
+    lodash "^4.17.4"
 
 vue-hot-reload-api@^2.1.0:
   version "2.1.0"
