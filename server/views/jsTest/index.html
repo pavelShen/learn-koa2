@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>随便写点</title>
+    {% if env === 'prod' %}
+    <link rel="stylesheet" href="/{{ projectName }}/{{ manifest['main.css'] }}">
+    {% endif %}
+  </head>
+  <body>
+    <div class="app">
+      <a href="#">{{ projectName }}</a>
+    </div>
+
+    <div class="box"></div>
+    
+    {% if env === 'prod' %}
+    <script src="/{{ projectName }}/{{ manifest['manifest.js'] }}"></script>
+    <script src="/{{ projectName }}/{{ manifest['vendor.js'] }}"></script>
+    <script src="/{{ projectName }}/{{ manifest['main.js'] }}"></script>
+    {% elif env === 'dev' %}
+    <script src="main.js"></script>
+    {% endif %}
+  </body>
+</html>

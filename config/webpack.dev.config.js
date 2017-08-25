@@ -5,7 +5,8 @@ const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true'
 
 module.exports = {
   entry:{
-    main:[`./front/${targetInfo.projectName}/index.js`,hotMiddlewareScript]
+    //main:[`./front/${targetInfo.projectName}/index.js`,hotMiddlewareScript]
+    main:`./front/${targetInfo.projectName}/index.js`
   },
   output: {
     filename: '[name].js',
@@ -46,7 +47,7 @@ module.exports = {
     }]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    //new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   devtool: 'source-map'

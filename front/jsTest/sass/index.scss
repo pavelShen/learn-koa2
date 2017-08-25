@@ -1,0 +1,33 @@
+.app{
+  width:200px;
+  a{
+    color:red;
+    width:100px;
+    margin-top:20%;
+    display: block;
+  }
+}
+
+.box{
+  border:1px solid #000;
+  display: inline-block;
+  line-height: 40px;
+  overflow: hidden;
+  &::before{
+    content:'文字';
+    display: block;
+    float:left;
+    font-size:18px;
+    margin-left:10px;
+  }
+  &::after{
+    content:'';
+    display: block;
+    width:20px;
+    height:20px;
+    float:left;
+    background:url('https://img6.bdstatic.com/img/image/smallpic/weijuchiluntu.jpg') no-repeat;
+    background-size:20px 20px; 
+    margin:10px;
+  }
+}
