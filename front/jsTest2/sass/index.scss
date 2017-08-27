@@ -1,0 +1,37 @@
+.app{
+  width:200px;
+  background: rgb(36, 36, 193);
+  position: absolute;
+  left:0;
+  top:0;
+  bottom:20px;
+  a{
+    color:red;
+    width:100px;
+    display: block;
+  }
+}
+
+h1{
+  color:red
+}
+
+.ani{
+  width:480px;
+  height:320px;
+  margin:50px auto;
+  overflow: hidden;
+  box-shadow:0 0 5px rgba(0,0,0,1);
+  background-size: cover;
+  background-position: center;
+  animation: loops 20s infinite;
+}
+
+@keyframes loops {
+  0%,50%,100% {
+      background:url(https://n1image.hjfile.cn/mh/2017/08/21/101069f0b3929c33348f118190d74205.jpg) no-repeat;             
+  }
+  25%,75% {
+      background:url(http://n1image.hjfile.cn/mh/2016/09/02/a0c9ca472e8ae8e26e34a31d98c074ce.jpg) no-repeat;
+  }
+}

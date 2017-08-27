@@ -19,13 +19,15 @@ module.exports = {
       loader: 'vue-loader',
     },{
       test: /\.css$/,
-      use: [ 'style-loader', 'css-loader' ]
+      use: [ 'style-loader', 'css-loader', 'postcss-loader' ]
     },{
       test: /\.scss$/,
       use: [{
           loader: "style-loader" // creates style nodes from JS strings
       }, {
           loader: "css-loader" // translates CSS into CommonJS
+      }, {
+          loader: "postcss-loader"
       }, {
           loader: "sass-loader" // compiles Sass to CSS
       }]

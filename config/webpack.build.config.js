@@ -24,12 +24,12 @@ module.exports = {
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         //resolve-url-loader may be chained before sass-loader if necessary
-        use: ['css-loader', 'sass-loader']
+        use: ['css-loader','postcss-loader','sass-loader']
       })
     },{
       test: /\.css$/,
       use: ExtractTextPlugin.extract({
-        use: 'css-loader'
+        use: ['css-loader','postcss-loader']
       })
     },{
       test: /\.js$/,
