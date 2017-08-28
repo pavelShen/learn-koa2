@@ -2,9 +2,11 @@
 
 import Vue from 'vue/dist/vue.common'
 import VueRouter from 'vue-router'
+import vcToast from './views/toast/index'
 import App from './views/index.vue'
 
 Vue.use(VueRouter)
+Vue.use(vcToast)
 
 require('./sass/index.scss')
 

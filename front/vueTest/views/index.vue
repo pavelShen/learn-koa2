@@ -2,7 +2,7 @@
 export default {
   data () {
     return {
-      
+      toastText:'abc'
     }
   },
   methods:{
@@ -16,6 +16,6 @@ export default {
   <div>
     1
     <router-view></router-view>
-    2
+    <vc-toast :text.sync="toastText"></vc-toast>
   </div>
 </template>  
