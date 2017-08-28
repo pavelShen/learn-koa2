@@ -1,1 +1,1 @@
-module.exports = {"projectName":"jsTest2"}
+module.exports = {"projectName":"vueTest"}

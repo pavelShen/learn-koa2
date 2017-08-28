@@ -2,24 +2,11 @@
 export default {
   data () {
     return {
-      message: '',
-      list:[
-        {
-          name:'a'
-        },
-        {
-          name:'b'
-        },
-        {
-          name:'c'
-        }
-      ]
+      
     }
   },
   methods:{
-    getDataId(){
-      
-    }
+
   }
 }
 </script>
@@ -27,11 +14,8 @@ export default {
 
 <template>
   <div>
-    <p>{{ message }}</p>  
-    <input v-model="message">
-
-    <ul @click="getDataId">
-      <li v-for="item in list" :key="item.name" data-id='1'>{{ item.name }}</li>
-    </ul>
+    1
+    <router-view></router-view>
+    2
   </div>
 </template>  
