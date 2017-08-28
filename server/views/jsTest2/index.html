@@ -6,13 +6,33 @@
     {% if env === 'prod' %}
     <link rel="stylesheet" href="/{{ projectName }}/{{ manifest['main.css'] }}">
     {% endif %}
+
+    <link rel="import" href="/component/my-component.html" />
   </head>
   <body>
     <div class="app">
       <a href="">dsfsdf</a>
     </div>
+
+    <!-- shadowDom -->
+    <template id="content">
+      <style>
+        h1{
+          color:green
+        }  
+      </style>
+      <h1>createShadowDomByJs</h1>>
+    </template>
+    <div id="shadow-dom-host"></div>
+    <h1>dsfsdf</h1>
+
     <a href="http://www.baidu.com">xgz</a>
     <div class="ani"></div>
+
+
+    webcomponent参考地址：http://www.w3cplus.com/web-components/why-web-components-are-important.html
+    <favorite-colour></favorite-colour>
+
     {% if env === 'prod' %}
     <script src="/{{ projectName }}/{{ manifest['manifest.js'] }}"></script>
     <script src="/{{ projectName }}/{{ manifest['vendor.js'] }}"></script>

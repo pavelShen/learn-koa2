@@ -10,6 +10,8 @@ canvas 五子棋
 tip:dev环境关闭热更新（开启时 直接在vue的原型上写东西失效）
 
 ## 内容
+
+#### canvas
 http://localhost:3000/project1  框架测试 <br />
 http://localhost:3000/project2  canvas五边形<br />
 http://localhost:3000/project3  canvas反色，灰度<br />
@@ -17,3 +19,11 @@ http://localhost:3000/project4  canvas水印<br />
 http://localhost:3000/project5  canvas五子棋<br />
 1. 撤销
 2. 判断输赢
+
+#### 随便写点js
+http://localhost:3000/jsTest  简单的js题目 <br />
+http://localhost:3000/jsTest2  webComponent<br />
+
+#### SPA
+http://localhost:3000/vueTest  用来测试vue-loader的<br />
+
