@@ -24,5 +24,6 @@ export default {
   <div>
     <span @click="changeToastText">toastText</span>
     {{ text }}
+    <div>------------</div>
   </div>
 </template>  
