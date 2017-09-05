@@ -2,7 +2,9 @@
 export default {
   data () {
     return {
-      
+      items:[{
+        name:'a'
+      }]
     }
   },
   props:{
@@ -13,7 +15,7 @@ export default {
   },
   methods:{
     changeToastText(){
-      this.$emit('update:text', 'efg')
+      this.$emit('update:text', this.items[0].name)
     }
   }
 }

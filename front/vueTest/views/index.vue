@@ -28,11 +28,11 @@ export default {
 
 <template>
   <div>
-    <div @click="goFoo">goFoo</div>
-    <div @click="goBar">goBar</div>
+    <!-- <div @click="goFoo">goFoo</div>
+    <div @click="goBar">goBar</div> -->
     <router-view></router-view>
     <vc-toast :text.sync="toastText"></vc-toast>
-    <component-a ref="compA"></component-a>
-    <component-b></component-b>
+    <!-- <component-a ref="compA"></component-a>
+    <component-b></component-b> -->
   </div>
 </template>  
