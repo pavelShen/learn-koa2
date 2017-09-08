@@ -9,7 +9,7 @@
     "postbuild": "NODE_ENV=prod nodemon -L server/app.js",
     "command": "node server/command.js",
     "create": "node tool/createNew.js",
-    "test": "jest ./front/myLodash/test/all.test.js"
+    "test": "jest ./front/myLodash/test/all.test.js --coverage"
   },
   "dependencies": {
     "babel-preset-env": "^1.4.0",
