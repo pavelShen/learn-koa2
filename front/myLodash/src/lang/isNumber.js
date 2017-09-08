@@ -1,4 +1,4 @@
-const isNumber = function(value){
+const isNumber = (value) => {
   return typeof value === 'number'
 }
 
