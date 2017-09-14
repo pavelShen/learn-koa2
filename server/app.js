@@ -8,6 +8,7 @@ const convert = require('koa-convert');
 const webpackDevMiddleware = require("koa-webpack-dev-middleware");
 const webpackHotMiddleware = require("koa-webpack-hot-middleware");
 const webpackConfig = require('../config/webpack.config.js')
+const responseTime = require('./middleware/responseTime')
 
 const app = new Koa()
 
@@ -17,6 +18,8 @@ app.use(views(__dirname + '/views', {
     html: 'nunjucks'
   }
 }));
+
+app.use(responseTime)
 
 if(process.env.NODE_ENV==='dev'){
   let compiler = webpack(webpackConfig);
