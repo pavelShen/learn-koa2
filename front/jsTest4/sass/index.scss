@@ -1,9 +1,24 @@
 .app{
   width:200px;
+  display: table;
+  height:300px;
   a{
     color:red;
     width:100px;
     margin-top:20%;
     display: block;
+  }
+}
+
+.test{
+  display: flex;
+  .item{
+    border:1px solid #CCC;
+    font-size:16px;
+    width: 100px;
+    //flex-grow: 2;
+  }
+  .itemx{
+    flex:0 1 200px;
   }
 }

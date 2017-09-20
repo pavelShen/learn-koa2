@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1504866354916" clover="3.2.0">
-  <project timestamp="1504866354916" name="All files">
-    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="3" coveredelements="3" complexity="0" loc="2" ncloc="2" packages="1" files="2" classes="2">
-      <file name="isArray.js" path="/Users/yuchenshen/study/my-koa/front/myLodash/src/lang/isArray.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="isNumber.js" path="/Users/yuchenshen/study/my-koa/front/myLodash/src/lang/isNumber.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
+<coverage generated="1505891758720" clover="3.2.0">
+  <project timestamp="1505891758720" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1" elements="13" coveredelements="12" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1">
+      <file name="deepClone.js" path="/Users/yuchenshen/study/my-koa/front/jsTest4/js/deepClone.js">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
       </file>
     </metrics>
   </project>

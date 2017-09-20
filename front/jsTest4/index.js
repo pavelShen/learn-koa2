@@ -1,6 +1,6 @@
-// require('./sass/index.scss')
-// require('./allPossible.js')
+require('./sass/index.scss')
 
+require('./js/deepClone.js')
 
 
 
